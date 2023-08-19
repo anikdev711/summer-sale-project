@@ -35,14 +35,14 @@
 
     <main>
         <!-- main container starts  -->
-        <div>
+        <div class="flex flex-col lg:flex-row gap-4 justify-center bg-gray-100">
             <!-- item container starts  -->
-            <div>
+            <div class="mt-32">
                 <!-- Kitchenware starts  -->
-                <h1 class="font-semibold text-4xl">Kitchenware</h1>
-                <div class="grid grid-cols-1 lg:grid-cols-3">
+                <h1 class="font-semibold text-4xl mb-8">Kitchenware</h1>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                     <!-- first item starts -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72 bg-base-100 shadow-xl p-4">
                         <figure class="px-10 pt-10 bg-stone-200">
                             <img src="images/prod1.png" alt="product-1" class="rounded-xl" />
                         </figure>
@@ -63,7 +63,7 @@
                     </div>
                     <!-- first item ends  -->
                     <!-- second item starts  -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72 bg-base-100 shadow-xl p-4">
                         <figure class="px-10 pt-10 bg-stone-200">
                             <img src="images/prod2.png" alt="product-2" class="rounded-xl" />
                         </figure>
@@ -84,7 +84,7 @@
                     </div>
                     <!-- second item ends  -->
                     <!-- third item starts  -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72 bg-base-100 shadow-xl p-4">
                         <figure class="px-10 pt-10 bg-stone-200">
                             <img src="images/prod3.png" alt="product-3" class="rounded-xl" />
                         </figure>
@@ -108,10 +108,10 @@
                 <!-- Kitchenware ends  -->
 
                 <!-- Sportswear starts  -->
-                <h1 class="font-semibold text-4xl">Sportswear</h1>
-                <div class="grid grid-cols-1 lg:grid-cols-3">
+                <h1 class="font-semibold text-4xl mt-14 mb-8">Sportswear</h1>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                     <!-- first item starts -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72 bg-base-100 shadow-xl p-4">
                         <figure class="px-10 pt-10 bg-stone-200">
                             <img src="images/prod4.png" alt="product-4" class="rounded-xl" />
                         </figure>
@@ -132,7 +132,7 @@
                     </div>
                     <!-- first item ends  -->
                     <!-- second item starts  -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72 bg-base-100 shadow-xl p-4">
                         <figure class="px-10 pt-10 bg-stone-200">
                             <img src="images/prod5.png" alt="product-5" class="rounded-xl" />
                         </figure>
@@ -153,7 +153,7 @@
                     </div>
                     <!-- second item ends  -->
                     <!-- third item starts  -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72 bg-base-100 shadow-xl p-4">
                         <figure class="px-10 pt-10 bg-stone-200">
                             <img src="images/prod6.png" alt="product-6" class="rounded-xl" />
                         </figure>
@@ -177,10 +177,10 @@
                 <!-- Sportswear ends -->
 
                 <!-- Furniture starts  -->
-                <h1 class="font-semibold text-4xl">Furniture</h1>
-                <div class="grid grid-cols-1 lg:grid-cols-3">
+                <h1 class="font-semibold text-4xl mt-14 mb-8">Furniture</h1>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                     <!-- first item starts -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72 bg-base-100 shadow-xl p-4">
                         <figure class="px-10 pt-10 bg-stone-200">
                             <img src="images/prod7.png" alt="product-7" class="rounded-xl" />
                         </figure>
@@ -201,7 +201,7 @@
                     </div>
                     <!-- first item ends  -->
                     <!-- second item starts  -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72 bg-base-100 shadow-xl p-4">
                         <figure class="px-10 pt-10 bg-stone-200">
                             <img src="images/prod8.png" alt="product-8" class="rounded-xl" />
                         </figure>
@@ -222,7 +222,7 @@
                     </div>
                     <!-- second item ends  -->
                     <!-- third item starts  -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72 bg-base-100 shadow-xl p-4">
                         <figure class="px-10 pt-10 bg-stone-200">
                             <img src="images/prod9.png" alt="product-9" class="rounded-xl" />
                         </figure>
@@ -248,8 +248,28 @@
             </div>
             <!-- item container ends  -->
             <!-- cart starts  -->
-            <div>
+            <div class="mt-52">
+                <!-- coupon section starts  -->
+                <div class="bg-white mb-6 p-6">
+                    <h1 class="font-medium text-2xl mb-4">Have coupon?</h1>
+                    <input type="text" name="" id="" class="border border-gray-400 px-4 py-2" placeholder="Coupon code">
+                    <button class="btn btn-secondary text-white" disabled>Apply</button>
+                </div>
+                <!-- coupon section ends  -->
+                <!-- price section starts  -->
+                <div class="bg-white p-6">
+                    <div>
 
+                    </div>
+                    <div>
+                        <p class="text-2xl font-normal">Total price: <span>00</span> TK</p>
+                        <p class="text-2xl font-normal">Discount: <span>00</span> TK</p>
+                        <p class="text-2xl font-normal mb-4">Total: <span>00</span> TK</p>
+                        <hr>
+                        <button class="btn btn-secondary text-white mt-4 w-full" disabled>Make Purchase</button>
+                    </div>
+                </div>
+                <!-- price section ends  -->
             </div>
             <!-- cart ends -->
         </div>
