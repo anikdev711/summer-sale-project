@@ -33,7 +33,7 @@
     </header>
     <!-- banner section ends -->
 
-    <main>
+    <main id="main-section">
         <!-- main container starts  -->
         <div class="flex flex-col lg:flex-row gap-4 justify-center bg-gray-100">
             <!-- item container starts  -->
@@ -57,7 +57,8 @@
                             <h2 class="card-title font-semibold text-lg">K. Accessories</h2>
                             <p class="font-normal text-sm">39.00 TK</p>
                             <div class="card-actions">
-                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
@@ -78,7 +79,8 @@
                             <h2 class="card-title font-semibold text-lg">K. Accessories Classic</h2>
                             <p class="font-normal text-sm">25.00 TK</p>
                             <div class="card-actions">
-                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
@@ -99,7 +101,8 @@
                             <h2 class="card-title font-semibold text-lg">Home Cooker</h2>
                             <p class="font-normal text-sm">49.00 TK</p>
                             <div class="card-actions">
-                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
@@ -126,7 +129,8 @@
                             <h2 class="card-title font-semibold text-lg">Sports Back Cap</h2>
                             <p class="font-normal text-sm">49.00 TK</p>
                             <div class="card-actions">
-                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
@@ -147,7 +151,8 @@
                             <h2 class="card-title font-semibold text-lg">Full Jersey Set</h2>
                             <p class="font-normal text-sm">69.00 TK</p>
                             <div class="card-actions">
-                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
@@ -168,7 +173,8 @@
                             <h2 class="card-title font-semibold text-lg">Sports cates</h2>
                             <p class="font-normal text-sm">159.00 TK</p>
                             <div class="card-actions">
-                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
@@ -195,7 +201,8 @@
                             <h2 class="card-title font-semibold text-lg">Single Relax Chair</h2>
                             <p class="font-normal text-sm">185.00 TK</p>
                             <div class="card-actions">
-                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
@@ -216,7 +223,8 @@
                             <h2 class="card-title font-semibold text-lg">Children play</h2>
                             <p class="font-normal text-sm">299.00 TK</p>
                             <div class="card-actions">
-                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
@@ -237,7 +245,8 @@
                             <h2 class="card-title font-semibold text-lg">Flexible Sofa</h2>
                             <p class="font-normal text-sm">339.00 TK</p>
                             <div class="card-actions">
-                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
@@ -252,7 +261,8 @@
                 <!-- coupon section starts  -->
                 <div class="bg-white mb-6 p-6">
                     <h1 class="font-medium text-2xl mb-4">Have coupon?</h1>
-                    <input type="text" name="" id="my-discount-coupon" class="border border-gray-400 px-4 py-2" placeholder="Coupon code">
+                    <input type="text" name="" id="my-discount-coupon" class="border border-gray-400 px-4 py-2"
+                        placeholder="Coupon code">
                     <button id="btn-apply-discount" class="btn btn-secondary text-white" disabled>Apply</button>
                 </div>
                 <!-- coupon section ends  -->
@@ -266,12 +276,19 @@
                         <p class="text-2xl font-normal">Discount: <span id="my-discount">00</span> TK</p>
                         <p class="text-2xl font-normal mb-4">Total: <span id="my-grand-total">00</span> TK</p>
                         <hr>
-                        <button id="btn-my-purchase" class="btn btn-secondary text-white mt-4 w-full" disabled>Make Purchase</button>
+                        <button id="btn-my-purchase" class="btn btn-secondary text-white mt-4 w-full" disabled>Make
+                            Purchase</button>
                     </div>
                 </div>
                 <!-- price section ends  -->
+                <!-- modal starts  -->
+                <div id="confirm-purchase">
+            
+                </div>
+                <!-- modal ends -->
             </div>
             <!-- cart ends -->
+
         </div>
         <!-- main container ends  -->
     </main>
