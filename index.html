@@ -57,7 +57,7 @@
                             <h2 class="card-title font-semibold text-lg">K. Accessories</h2>
                             <p class="font-normal text-sm">39.00 TK</p>
                             <div class="card-actions">
-                                <button class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <h2 class="card-title font-semibold text-lg">K. Accessories Classic</h2>
                             <p class="font-normal text-sm">25.00 TK</p>
                             <div class="card-actions">
-                                <button class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                             <h2 class="card-title font-semibold text-lg">Home Cooker</h2>
                             <p class="font-normal text-sm">49.00 TK</p>
                             <div class="card-actions">
-                                <button class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                             <h2 class="card-title font-semibold text-lg">Sports Back Cap</h2>
                             <p class="font-normal text-sm">49.00 TK</p>
                             <div class="card-actions">
-                                <button class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                             <h2 class="card-title font-semibold text-lg">Full Jersey Set</h2>
                             <p class="font-normal text-sm">69.00 TK</p>
                             <div class="card-actions">
-                                <button class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                             <h2 class="card-title font-semibold text-lg">Sports cates</h2>
                             <p class="font-normal text-sm">159.00 TK</p>
                             <div class="card-actions">
-                                <button class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                             <h2 class="card-title font-semibold text-lg">Single Relax Chair</h2>
                             <p class="font-normal text-sm">185.00 TK</p>
                             <div class="card-actions">
-                                <button class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                             <h2 class="card-title font-semibold text-lg">Children play</h2>
                             <p class="font-normal text-sm">299.00 TK</p>
                             <div class="card-actions">
-                                <button class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -237,7 +237,7 @@
                             <h2 class="card-title font-semibold text-lg">Flexible Sofa</h2>
                             <p class="font-normal text-sm">339.00 TK</p>
                             <div class="card-actions">
-                                <button class="btn btn-secondary text-white">Add to cart</button>
+                                <button onclick="goToMyCart(this)" class="btn btn-secondary text-white">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -258,13 +258,13 @@
                 <!-- coupon section ends  -->
                 <!-- price section starts  -->
                 <div class="bg-white p-6">
-                    <div>
+                    <div id="my-cart-items">
 
                     </div>
                     <div>
-                        <p class="text-2xl font-normal">Total price: <span>00</span> TK</p>
-                        <p class="text-2xl font-normal">Discount: <span>00</span> TK</p>
-                        <p class="text-2xl font-normal mb-4">Total: <span>00</span> TK</p>
+                        <p class="text-2xl font-normal">Total price: <span id="my-total-price">00</span> TK</p>
+                        <p class="text-2xl font-normal">Discount: <span id="my-discount">00</span> TK</p>
+                        <p class="text-2xl font-normal mb-4">Total: <span id="my-grand-total">00</span> TK</p>
                         <hr>
                         <button class="btn btn-secondary text-white mt-4 w-full" disabled>Make Purchase</button>
                     </div>
@@ -275,6 +275,10 @@
         </div>
         <!-- main container ends  -->
     </main>
+
+    <!-- script starts  -->
+    <script src="scripts/cart.js"></script>
+    <!-- script ends -->
 
 </body>
 
