@@ -3,14 +3,15 @@ function goToMyCart(target) {
 
     // total price 
     const myCartItemsContainer = document.getElementById('my-cart-items');
-    const selectedItemName = target.parentNode.parentNode.childNodes[1].innerText;
-    const ul = document.createElement('ul');
+    const selectedItemName = target.childNodes[5].childNodes[1].innerText;
+    const count = myCartItemsContainer.childElementCount;
+    const ol = document.createElement('ol');
     const li = document.createElement('li');
     li.innerText = selectedItemName;
-    ul.appendChild(li);
-    myCartItemsContainer.appendChild(ul);
+    ol.innerHTML = `${count + 1}. ${li.innerText}`;
+    myCartItemsContainer.appendChild(ol);
 
-    const myItemsPrice = target.parentNode.parentNode.childNodes[3].innerText.split(" ")[0];
+    const myItemsPrice = target.childNodes[5].childNodes[3].innerText.split(" ")[0];
     totalPrice = parseFloat(totalPrice) + parseFloat(myItemsPrice);
     let totalPriceValue = totalPrice.toFixed(2)
     let myTotalPrice = document.getElementById('my-total-price');
@@ -70,30 +71,18 @@ function goToMyCart(target) {
         }
     }
     makeMyPurchase();
-
 }
 
-//modal
-document.getElementById('btn-my-purchase').addEventListener('click', function () {
-    const confirmPurchase = document.getElementById('confirm-purchase');
-    const div = document.createElement('div');
-    div.innerHTML = `
-    <!-- Open the modal using ID.showModal() method -->
-    <button class="btn btn-success text-lg text-white font-bold w-full" onclick="my_modal_5.showModal()">Confirm Purchase</button>
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-      <form method="dialog" class="modal-box">
-        <img class="ml-28 md:ml-36 lg:ml-40" src="images/congo.png" alt="congo-image"/>
-        <h3 class="font-bold text-4xl text-center">Congratulations</h3>
-        <p class="py-4 text-center">You have purchased the product</p>
-        <div class="modal-action">
-          <!-- if there is a button in form, it will close the modal -->
-          <button id="btn-go-home" class="btn btn-primary text-white text-center">Go Home</button>
-        </div>
-      </form>
-    </dialog>
-    `
-    confirmPurchase.appendChild(div);
-    document.getElementById('btn-go-home').addEventListener('click', function(){
-        window.location.href = 'index.html';
-    })
+//modal 
+const btnMyPurchase = document.getElementById('btn-my-purchase');
+const myPurchaseConfirmationModal = document.getElementById('confirm-purchase');
+
+function confirmMyPurchase() {
+    myPurchaseConfirmationModal.classList.add("active");
+}
+
+btnMyPurchase.addEventListener("click", confirmMyPurchase);
+
+document.getElementById('btn-go-home').addEventListener('click', function () {
+    window.location.href = 'index.html';
 })
