@@ -17,9 +17,65 @@ function goToMyCart(target){
     // console.log(totalPriceValue);
 
     let myTotalPrice = document.getElementById('my-total-price');
-    // console.log(myTotalPrice.innerText = totalPriceValue);
     myTotalPrice.innerText = totalPriceValue;
-    // console.log(myTotalPrice.innerText);
+
+    //Coupon code
+    const btnApplyDiscount = document.getElementById('btn-apply-discount')
+    const myDiscountCouponText = document.getElementById('my-discount-coupon');
+    const myDiscountCoupon = myDiscountCouponText.value;
+    if(totalPriceValue >= 200){
+        btnApplyDiscount.removeAttribute('disabled');
+    }
+    else{
+        btnApplyDiscount.setAttribute('disabled', true);
+    }
+
+    //discount 
+    const myDiscountValue = document.getElementById('my-discount');
+    const myDiscountString = myDiscountValue.innerText;
+    let myDiscount = parseFloat(myDiscountString);
+
+    const myGrandTotalValue = document.getElementById('my-grand-total');
+    const myGrandTotalString = myGrandTotalValue.innerText;
+    let myGrandTotal = parseFloat(myGrandTotalString);
+
+    document.getElementById('btn-apply-discount').addEventListener('click', function(){
+        const inputFieldValue = document.getElementById('my-discount-coupon');
+        const inputField = inputFieldValue.value;
+        if(inputField === 'SELL200'){
+            myDiscount = totalPriceValue * 0.2;
+            let myDiscountUptoTwoDecimal = myDiscount.toFixed(2);
+            myDiscountValue.innerText = myDiscountUptoTwoDecimal;
+
+            myGrandTotal = totalPriceValue - myDiscountUptoTwoDecimal;
+            let myGrandTotalUptoTwoDecimal = myGrandTotal.toFixed(2);
+            myGrandTotalValue.innerText = myGrandTotalUptoTwoDecimal;
+
+        }
+        else{
+            myDiscount = 0;
+            let myDiscountUptoTwoDecimal = myDiscount.toFixed(2);
+            myDiscountValue.innerText = myDiscountUptoTwoDecimal;
+            myGrandTotal = totalPriceValue;
+            myGrandTotalValue.innerText = myGrandTotal;
+        }
+    })
+
+    //make purchase
+    const btnMyPurchase = document.getElementById('btn-my-purchase');
+    function makeMyPurchase(){
+        if(totalPriceValue > 0){
+            btnMyPurchase.disabled = false;
+            myGrandTotalValue.innerText = totalPriceValue;
+        }
+        else{
+            btnMyPurchase.disabled = true;
+        }
+    }
+    makeMyPurchase();
+
+
+
     
     
 }
